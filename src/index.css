@@ -1,0 +1,168 @@
+/* @import "tailwindcss"; */
+
+* {
+  font-family: sans-serif;
+  background-color: #010101;
+}
+
+div img {
+  border-radius: 50px;
+  flex: 2;
+}
+h1 {
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+h4 {
+  font-weight: bold;
+}
+.main-div {
+  width: 900px;
+  margin: auto;
+  margin-top: 150px;
+  background-color: #010101;
+  padding: 50px;
+}
+
+.form {
+  display: flex;
+  margin: auto;
+  align-items: center;
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  color: white;
+  flex: 1;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 9px 32px;
+  font-size: 16px;
+  background-color: rgb(33, 94, 194);
+  color: white;
+  border-radius: 25px;
+  border-style: none;
+  margin-top: 40px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:hover {
+  padding: 9px 32px;
+  font-size: 16px;
+  background-color: white;
+  color: rgb(33, 94, 194);
+  border-radius: 25px;
+  border-style: none;
+  margin-top: 40px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-1 {
+  padding: 6px 10px;
+  font-size: 16px;
+  background-color: rgb(33, 94, 194);
+  color: white;
+  border-radius: 25px;
+  border-style: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.btn-1:hover {
+  padding: 6px 10px;
+  font-size: 16px;
+  background-color: white;
+  color: rgb(33, 94, 194);
+  border-radius: 25px;
+  border-style: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.inputs {
+  background-color: rgb(31, 31, 31);
+  padding: 9px 32px;
+  font-size: 16px;
+  border-radius: 25px;
+  border-style: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+input::placeholder {
+  color: gray;
+  font-size: 14px;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+p {
+  color: rgb(196, 196, 196);
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .main-div {
+    width: 90%;
+    padding: 30px;
+    margin-top: 100px;
+  }
+
+  .form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-inputs {
+    margin-left: 0;
+    margin-top: 30px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .inputs {
+    width: 90%;
+    text-align: center;
+  }
+
+  .btn {
+    width: 90%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-div {
+    padding: 20px;
+    margin-top: 60px;
+  }
+
+  img {
+    height: 300px;
+  }
+
+  .inputs,
+  .btn {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+
+  input::placeholder {
+    font-size: 12px;
+  }
+}
+
+/* main branch is front end  */
