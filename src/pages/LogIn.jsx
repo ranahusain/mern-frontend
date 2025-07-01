@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 
-const Login = () => {
+const LogIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -83,6 +83,6 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LogIn;
 
 //login ka i chota tha

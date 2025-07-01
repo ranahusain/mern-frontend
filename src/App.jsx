@@ -1,5 +1,5 @@
 import "./App.css";
-import Login from "./pages/Login";
+import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
 import axios from "axios";
 import AllUsers from "./pages/AllUsers";
@@ -39,7 +39,7 @@ const App = () => {
           <Route path="/AllUsers" element={<AllUsers />} />
           <Route path="/Chat" element={<Chat />} />
         </Route>
-        <Route path="/Login" element={<Login />} />
+        <Route path="/LogIn" element={<LogIn />} />
       </Route>
     )
   );
