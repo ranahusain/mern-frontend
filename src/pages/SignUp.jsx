@@ -75,8 +75,8 @@ const SignUp = ({ addUser }) => {
               placeholder="enter your password"
               value={password}
               required
-              pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
               minLength={6}
+              //pattern is removed for password
               onChange={(e) => setPassword(e.target.value)}
             />
             <button className="btn">Sign Up</button>
