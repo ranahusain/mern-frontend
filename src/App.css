@@ -71,7 +71,7 @@
 .input-section {
   display: flex;
   gap: 0.5rem;
-  width: 90%;
+  width: 60%;
   justify-content: center;
   flex-wrap: wrap;
 }
