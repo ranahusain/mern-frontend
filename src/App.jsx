@@ -21,7 +21,8 @@ const App = () => {
   const addUser = async (newUser) => {
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/signup/",
+        // "http://localhost:3000/api/signup/",
+        "https://mern-backend-ivory-six.vercel.app/api/signup/",
         newUser
       );
       return res.data;
