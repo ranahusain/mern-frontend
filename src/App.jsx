@@ -22,7 +22,7 @@ const App = () => {
     try {
       const res = await axios.post(
         // "http://localhost:3000/api/signup/",
-        "https://mern-backend-ivory-six.vercel.app/api/signup/",
+        "https://mern-backend-5osx.onrender.com/api/signup/",
         newUser
       );
       return res.data;
