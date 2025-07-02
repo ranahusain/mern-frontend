@@ -1,12 +1,20 @@
 import { Outlet, Navigate } from "react-router-dom";
-import Cookies from "js-cookie";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const ProtectedRoutes = () => {
-  const token = Cookies.get("token");
+  const navigate = useNavigate();
 
-  if (!token) {
-    return <Navigate to="/login" />;
-  }
+  useEffect(() => {
+    axios
+      .get("https://mern-backend-5osx.onrender.com/api/verify", {
+        withCredentials: true,
+      })
+      .catch(() => {
+        navigate("/login");
+      });
+  }, []);
 
   return <Outlet />;
 };
