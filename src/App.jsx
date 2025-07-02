@@ -33,7 +33,7 @@ const App = () => {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/SignUp" element={<MainLayout />}>
+      <Route path="/" element={<MainLayout />}>
         <Route path="/SignUp" element={<SignUp addUser={addUser} />} />
         <Route element={<ProtectedRoutes />}>
           <Route path="/AllUsers" element={<AllUsers />} />
