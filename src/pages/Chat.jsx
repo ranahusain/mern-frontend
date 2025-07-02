@@ -2,7 +2,8 @@ import "../App.css";
 import { useState, useEffect } from "react";
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:3000");
+// const socket = io("http://localhost:3000");
+const socket = io("https://mern-backend-5osx.onrender.com/");
 
 const Chat = () => {
   const [message, setMessageList] = useState([]);

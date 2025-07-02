@@ -12,7 +12,7 @@ const AllUsers = () => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
     const fetchUsers = async () => {
-      const apiUrl = "http://localhost:3000/api/users";
+      const apiUrl = "https://mern-backend-5osx.onrender.com/api/users";
       try {
         const res = await axios.get(apiUrl, { withCredentials: true });
         const data = res.data;
@@ -31,7 +31,7 @@ const AllUsers = () => {
 
   const logoutUser = async () => {
     try {
-      await axios.get("http://localhost:3000/api/logout", {
+      await axios.get("https://mern-backend-5osx.onrender.com/api/logout", {
         withCredentials: true,
       });
       toast.success("LoggedOut Successfully !");
