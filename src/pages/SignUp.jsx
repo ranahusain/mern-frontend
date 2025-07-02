@@ -61,7 +61,7 @@ const SignUp = ({ addUser }) => {
               placeholder="enter your mail"
               id="inputEmail"
               value={email}
-              // pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               onChange={(e) => setEmail(e.target.value)}
               required
             />
@@ -74,7 +74,7 @@ const SignUp = ({ addUser }) => {
               placeholder="enter your password"
               value={password}
               // required
-              // pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
+              pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
               minLength={6}
               onChange={(e) => setPassword(e.target.value)}
             />
