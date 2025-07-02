@@ -1,14 +1,14 @@
-import { Outlet, Navigate } from "react-router-dom";
-import Cookies from "js-cookie";
+// import { Outlet, Navigate } from "react-router-dom";
+// import Cookies from "js-cookie";
 
-const ProtectedRoutes = () => {
-  const token = Cookies.get("token");
+// const ProtectedRoutes = () => {
+//   const token = Cookies.get("token");
 
-  if (!token) {
-    return <Navigate to="/login" />;
-  }
+//   if (!token) {
+//     return <Navigate to="/login" />;
+//   }
 
-  return <Outlet />;
-};
+//   return <Outlet />;
+// };
 
-export default ProtectedRoutes;
+// export default ProtectedRoutes;
