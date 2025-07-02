@@ -8,8 +8,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-  box-sizing: border-box;
 }
 
 .message-list {
@@ -17,7 +15,7 @@
   margin-bottom: 1rem;
   max-height: 16rem;
   overflow-y: auto;
-  width: 100%;
+  width: 90%;
   padding: 0 1rem;
   box-sizing: border-box;
 }
@@ -25,12 +23,11 @@
 .message-bubble {
   display: flex;
   flex-direction: column;
+  max-width: 30%;
   padding: 0.5rem 1rem;
   margin: 0.5rem auto;
   border-radius: 99px;
   word-wrap: break-word;
-  width: fit-content;
-  max-width: 80%; /* changed from fixed 30% to dynamic */
 }
 
 .own-message {
@@ -50,37 +47,39 @@
 .own-message .message-text,
 .other-message .message-text {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 20px;
 }
 
 .own-message .message-user,
 .other-message .message-user {
   margin: 0;
-  font-size: 0.75rem;
+  font-size: 10px;
 }
 
-/* Consistent colors (no need to re-declare background in child) */
 .own-message .message-text,
 .own-message .message-user {
+  background-color: white;
   color: black;
 }
+
 .other-message .message-text,
 .other-message .message-user {
-  color: white;
+  background-color: #4a4a4a;
+  color: rgb(246, 246, 246);
 }
 
 .input-section {
   display: flex;
   gap: 0.5rem;
-  flex-wrap: wrap;
+  width: 90%;
   justify-content: center;
-  width: 100%;
+  flex-wrap: wrap;
 }
 
 .message-input {
   flex: 1;
-  min-width: 200px;
-  padding: 0.5rem 1rem;
+  min-width: 50%;
+  padding: 0.5rem 2rem;
   border-radius: 0.375rem;
   background-color: #333;
   color: white;
@@ -96,7 +95,6 @@
   border-radius: 0.375rem;
   cursor: pointer;
   transition: 0.3s ease;
-  white-space: nowrap;
 }
 
 .chat-button:hover {
@@ -104,42 +102,20 @@
   color: white;
 }
 
-/* ====== Responsive Tweaks ====== */
-
-@media screen and (max-width: 768px) {
+/* Responsive Adjustments for Mobile */
+@media (max-width: 768px) {
   .message-bubble {
     max-width: 90%;
-    font-size: 1rem;
-  }
-
-  .message-text {
-    font-size: 1rem;
-  }
-
-  .message-user {
-    font-size: 0.7rem;
-  }
-
-  .message-input {
-    padding: 0.5rem;
-  }
-
-  .chat-button {
-    padding: 0.5rem 0.75rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .message-bubble {
-    max-width: 100%;
   }
 
   .input-section {
     flex-direction: column;
-    gap: 0.5rem;
+    align-items: stretch;
   }
 
+  .message-input,
   .chat-button {
     width: 100%;
+    margin-top: 0.25rem;
   }
 }
