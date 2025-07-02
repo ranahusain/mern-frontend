@@ -53,6 +53,7 @@ const SignUp = ({ addUser }) => {
               id="inputName"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              required
             />
             <h4>E-mail</h4>
             <input
@@ -73,7 +74,7 @@ const SignUp = ({ addUser }) => {
               id="inputPassword"
               placeholder="enter your password"
               value={password}
-              // required
+              required
               pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
               minLength={6}
               onChange={(e) => setPassword(e.target.value)}
