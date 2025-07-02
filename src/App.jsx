@@ -4,7 +4,7 @@ import SignUp from "./pages/SignUp";
 import axios from "axios";
 import AllUsers from "./pages/AllUsers";
 import Chat from "./pages/Chat";
-// import ProtectedRoutes from "./utils/ProtectedRoutes";
+import ProtectedRoutes from "./utils/ProtectedRoutes";
 // import { ToastContainer } from "react-toastify";
 
 import {
@@ -36,10 +36,10 @@ const App = () => {
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
         <Route path="/SignUp" element={<SignUp addUser={addUser} />} />
-        {/* <Route element={<ProtectedRoutes />}> */}
-        <Route path="/AllUsers" element={<AllUsers />} />
-        <Route path="/Chat" element={<Chat />} />
-        {/* </Route> */}
+        <Route element={<ProtectedRoutes />}>
+          <Route path="/AllUsers" element={<AllUsers />} />
+          <Route path="/Chat" element={<Chat />} />
+        </Route>
         <Route path="/LogIn" element={<LogIn />} />
       </Route>
     )
